@@ -1,1 +1,8 @@
-<div class="map-container" #mapbox></div>
+<div
+  class="map-container"
+  leaflet
+  [leafletOptions]="options"
+  #mapbox>
+  <div *ngIf="showIncidents" [leafletLayer]="incidentLayer!"></div>
+  <div *ngIf="showRadius" [leafletLayer]="geoLayer!"></div>
+</div>
